@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation.JSImport
 object mod {
   @js.native
   @JSImport("clsx", "clsx")
-  def clsx(x: String*): String = js.native
+  def clsx(x: ClassValue*): String = js.native
+
+  type ClassValue = String
 }
