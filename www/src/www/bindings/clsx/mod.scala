@@ -3,14 +3,12 @@ package www.bindings.clsx
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 
-// type ClassArray = js.Array[ClassValue]
-
-// type ClassValue = String | ClassArray
-
 object mod {
   @js.native
   @JSImport("clsx", "clsx")
-  def clsx(x: ClassValue*): String = js.native
+  def clsx(inputs: ClassValue*): String = js.native
 
-  type ClassValue = String
+  type ClassArray = js.Array[ClassValue]
+  type ClassDictionary = js.Dictionary[js.Any]
+  type ClassValue = js.UndefOr[Any | ClassDictionary |String | Double | js.BigInt | Null | Boolean]
 }
