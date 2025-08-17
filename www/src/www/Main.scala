@@ -8,10 +8,7 @@ object Main {
   def run(): Unit = {
     render(
       dom.document.getElementById("app"),
-      div(
-        cls("text-red-500"),
-        "Mill + Vite + Scala.jssss",
-      )
+      App()()
     )
   }
 
